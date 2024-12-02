@@ -66,7 +66,7 @@ class PersonsViewTest {
     @Test
     void testListarWithEmptySet() {
         Set<Person> emptySet = new HashSet<>();
-        view.listar(emptySet);
+        view.list(emptySet);
         
         String expectedOutput = "No hay personas disponibles.";
         assertEquals(expectedOutput, outContent.toString().trim());
@@ -90,7 +90,7 @@ class PersonsViewTest {
         persons.add(person2);
 
         // Call method
-        view.listar(persons);
+        view.list(persons);
         
         // Verify output
         String output = outContent.toString().trim();
@@ -100,7 +100,7 @@ class PersonsViewTest {
 
     @Test
     void testMostrarDetalleWithNullPerson() {
-        view.mostrarDetalle(null);
+        view.showDetail(null);
         assertEquals("La persona no existe.", outContent.toString().trim());
     }
 
@@ -113,7 +113,7 @@ class PersonsViewTest {
         }).when(mockPerson).showDetails();
 
         // Call method
-        view.mostrarDetalle(mockPerson);
+        view.showDetail(mockPerson);
         
         // Verify output
         String output = outContent.toString().trim();

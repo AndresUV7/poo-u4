@@ -43,7 +43,7 @@ public class PersonsView {
                 personType, personType);
     }
 
-    public void listar(Set<Person> persons) {
+    public void list(Set<Person> persons) {
         if (persons.isEmpty()) {
             System.out.println("No hay personas disponibles.");
             return;
@@ -53,7 +53,7 @@ public class PersonsView {
         }
     }
 
-    public void mostrarDetalle(Person person) {
+    public void showDetail(Person person) {
         if (person == null) {
             System.out.println("La persona no existe.");
             return;
